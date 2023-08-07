@@ -7,6 +7,9 @@ import Favourites from './Components/Favourites';
 import PageNotFound from './Components/PageNotFound';
 import { Provider } from 'react-redux';
 import store from './redux/store';
+import Login from './Components/Login';
+import Register from './Components/Register';
+import MovieCard from './Components/MovieCard';
 
 function App() {
   return (
@@ -14,15 +17,19 @@ function App() {
       
       <Provider store={store}>
       <BrowserRouter>
-      <Navbar />
         <Routes>
-          <Route path='/' element={
+        <Route path='/' element={<Register/>}/>
+          <Route path='/login' element={<Login/>}/>
+          
+          <Route path='/home' element={
             <div>
+              <Navbar />
               <Banner />
               <Movies />
             </div>
           }></Route>
-          <Route path='/fav' element={<Favourites></Favourites>}></Route>
+          <Route path='/fav' element={<div><Navbar/><Favourites/></div>}></Route>
+          <Route path='/movie/:id' element={<MovieCard/>}/>
           <Route path='*' element={<PageNotFound></PageNotFound>}></Route>
         </Routes>
       </BrowserRouter>

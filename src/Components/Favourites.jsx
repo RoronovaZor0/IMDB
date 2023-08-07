@@ -167,7 +167,7 @@ function Favourites() {
         <tbody class="divide-y divide-gray-100 border-t border-gray-100">
 
         {filteredMovies.map((movie)=>{
-          // {console.log(movie)};
+          {console.log(movie)};
           return <tr class="hover:bg-gray-50" key = {movie.id}>
            <th class="flex items-center px-6 py-4 font-normal text-gray-900 space-x-2">              
                <img

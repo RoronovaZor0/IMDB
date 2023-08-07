@@ -1,0 +1,39 @@
+.grid{
+    display: grid;
+    grid-template-columns: 60% 40% ;
+    height: 600px;
+}
+.nika{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+.nika img{
+    width: 100%;
+}
+.register{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding-top: 140px;
+    background-color: aliceblue;
+}
+.register input{
+    border: 1px solid black;
+    margin-top: 10px;
+    border-radius: 4px;
+    padding: 10px;
+    padding-left: 82px;
+}
+.register button{
+    margin-left: 76px;
+    border: 1px solid black;
+    padding: 10px 34px;
+    margin-top: 17px;
+    border-radius: 7px;
+    margin-bottom: 10px;
+}
+.register p{
+    margin-left: 25px;
+}

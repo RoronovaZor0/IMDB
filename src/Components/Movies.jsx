@@ -5,7 +5,8 @@ import { Oval } from "react-loader-spinner";
 import Page from './Pagination';
 import { hover } from '@testing-library/user-event/dist/hover';
 import { useSelector, useDispatch } from 'react-redux';
-import {addFavourites, favMovies} from "../redux/favouriteReducer"
+import {addFavourites, favMovies} from "../redux/favouriteReducer";
+import { Link } from 'react-router-dom';
 // import Image from '../Banner.jpg'
 
 function Movies() {
@@ -74,7 +75,9 @@ function Movies() {
         /></div> : 
             movies.map((movie)=>{
               // console.log(movie)
-              return(<div
+              return(
+                
+              <div
                 onMouseOver={
                   ()=>{showEmoji(movie.id)}
                 }
@@ -83,10 +86,15 @@ function Movies() {
                 }
                 key={movie.id} className='w-[160px]'
                >
+                <Link to={`/movie/${movie.id}`}>
                 <div 
                 className='bg-cover border-2 w-[160px] h-[240px] rounded-xl hover:scale-110  duratin-300'
                 style={{backgroundImage:`url(https://image.tmdb.org/t/p/original/${movie.poster_path})`}}>
-                  <div className='p-2 ml-28 rounded-xl ring-yellow-500'
+                  
+                </div>
+                </Link>
+                <div>
+                <div className='p-2 ml-28 rounded-xl ring-yellow-500'
                 style={{
                   display:hovered==movie.id? "block" : "none"
                 }}>
@@ -98,10 +106,11 @@ function Movies() {
                   </div>
                   }
                 </div>
-                </div>
-                  <h4 className='mt-2 font-medium'>
+                <h4 className='mt-2 font-medium justify-center'>
                   {movie.title || movie.name}
                   </h4>
+                </div>
+                  
               </div>)
             })
         }
@@ -119,7 +128,6 @@ function Movies() {
       onPrev={onPrev}
       onNext={onNext}
       >
-
       </Page>
     </div>
   )

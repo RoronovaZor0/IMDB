@@ -1,0 +1,33 @@
+.Login{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
+.Login input{
+    border: 1px solid black;
+    margin-top: 10px;
+    border-radius: 4px;
+    padding: 10px;
+    padding-left: 82px;
+}
+.Login button{
+    color: white;
+    margin-left: 80px;
+    border: 1px solid white;
+    padding: 10px 34px;
+    margin-top: 17px;
+    border-radius: 7px;
+    margin-bottom: 10px;
+}
+.Login p{
+    margin-left: 25px;
+}
+.Login span{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.Login a{
+    color: white;
+    margin-left: 35px;
+}
